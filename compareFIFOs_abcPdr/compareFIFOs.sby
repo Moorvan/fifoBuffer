@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read -sv compareFIFOs.sv ResetCounter.sv
+prep -top compareFIFOs -nordff
+
+[files]
+compareFIFOs.sv
+ResetCounter.sv

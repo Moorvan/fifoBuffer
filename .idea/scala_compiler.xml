@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="fifobuffer_8594" />
+    <profile name="sbt 2" modules="FIFO-Buffer">
+      <option name="reflectiveCalls" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-Xcheckinit" />
+      </parameters>
+      <plugins>
+        <plugin path="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/edu/berkeley/cs/chisel3-plugin_2.13.7/3.5.0-RC2/chisel3-plugin_2.13.7-3.5.0-RC2.jar" />
+      </plugins>
+    </profile>
+  </component>
+</project>

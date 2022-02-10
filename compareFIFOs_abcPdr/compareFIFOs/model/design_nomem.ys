@@ -1,0 +1,14 @@
+# running in compareFIFOs/src/
+read -sv compareFIFOs.sv ResetCounter.sv
+prep -top compareFIFOs -nordff
+
+memory_map
+async2sync
+chformal -assume -early
+chformal -live -fair -cover -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+write_ilang ../model/design_nomem.il

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites disabled="0" errors="0" failures="0" tests="1" time="25">
+<testsuite disabled="0" errors="0" failures="0" name="compareFIFOs" skipped="0" tests="1" time="25">
+<properties>
+<property name="os" value="posix"/>
+</properties>
+<testcase classname="compareFIFOs" name="default" status="PASS" time="25">
+<system-out>SBY 10:51:57 [compareFIFOs] Copy '/Users/yuechen/Developer/chisel-projects/fifoBuffer/compareFIFOs_abcPdr/compareFIFOs.sv' to '/Users/yuechen/Developer/chisel-projects/fifoBuffer/compareFIFOs_abcPdr/compareFIFOs/src/compareFIFOs.sv'.
+SBY 10:51:57 [compareFIFOs] Copy '/Users/yuechen/Developer/chisel-projects/fifoBuffer/compareFIFOs_abcPdr/ResetCounter.sv' to '/Users/yuechen/Developer/chisel-projects/fifoBuffer/compareFIFOs_abcPdr/compareFIFOs/src/ResetCounter.sv'.
+SBY 10:51:57 [compareFIFOs] engine_0: abc pdr
+SBY 10:51:57 [compareFIFOs] nomem: starting process &quot;cd compareFIFOs/src; yosys -ql ../model/design_nomem.log ../model/design_nomem.ys&quot;
+SBY 10:51:57 [compareFIFOs] nomem: finished (returncode=0)
+SBY 10:51:57 [compareFIFOs] aig: starting process &quot;cd compareFIFOs/model; yosys -ql design_aiger.log design_aiger.ys&quot;
+SBY 10:51:57 [compareFIFOs] aig: finished (returncode=0)
+SBY 10:51:57 [compareFIFOs] engine_0: starting process &quot;cd compareFIFOs; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr; write_cex -a engine_0/trace.aiw'&quot;
+SBY 10:52:23 [compareFIFOs] engine_0: ABC command line: &quot;read_aiger model/design_aiger.aig; fold; strash; pdr; write_cex -a engine_0/trace.aiw&quot;.
+SBY 10:52:23 [compareFIFOs] engine_0: Warning: The network has no constraints.
+SBY 10:52:23 [compareFIFOs] engine_0: Invariant F[23] : 4323 clauses with 82 flops (out of 82) (cex = 0, ave = 13.46)
+SBY 10:52:23 [compareFIFOs] engine_0: Verification of invariant with 4323 clauses was successful.  Time =     0.19 sec
+SBY 10:52:23 [compareFIFOs] engine_0: Property proved.  Time =    25.21 sec
+SBY 10:52:23 [compareFIFOs] engine_0: Counter-example is not available.
+SBY 10:52:23 [compareFIFOs] engine_0: finished (returncode=0)
+SBY 10:52:23 [compareFIFOs] engine_0: Status returned by engine: PASS
+SBY 10:52:23 [compareFIFOs] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:25 (25)
+SBY 10:52:23 [compareFIFOs] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:25 (25)
+SBY 10:52:23 [compareFIFOs] summary: engine_0 (abc pdr) returned PASS
+SBY 10:52:23 [compareFIFOs] DONE (PASS, rc=0)
+</system-out></testcase></testsuite></testsuites>
